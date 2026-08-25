@@ -1,0 +1,58 @@
+@reference "@/index.css";
+
+.bootScreen {
+  @apply w-screen h-screen bg-black;
+}
+
+.content {
+  @apply w-full h-full flex justify-center items-center;
+  @apply flex-col gap-4 transition-all ease-in;
+}
+
+/**
+ Ready Screen Styling */
+.readyScreen {
+  @apply relative w-screen h-screen overflow-hidden;
+}
+
+.readyScreen::before {
+  content: "";
+  @apply absolute inset-0 bg-cover bg-center bg-no-repeat;
+  @apply bg-[url('/images/ready.jpg')];
+  filter: blur(8px);
+  transform: scale(1.05);
+}
+
+.readyScreen > * {
+  @apply relative z-10;
+}
+
+.spin {
+  animation: logoBoot 0.6s ease-in-out forwards;
+  width: 20px;
+}
+
+.logo-boot {
+  @apply w-13 h-13 bg-white rounded-full animate-pulse text-black;
+  @apply flex justify-center items-center;
+}
+
+.btnDesktop {
+  @apply cursor-pointer p-2 px-3 bg-red-600 rounded-md;
+  @apply mt-5 text-sm;
+}
+
+@keyframes logoBoot {
+  from {
+    width: 20px;
+    opacity: 0.5;
+    transform: rotate(0deg);
+  }
+
+  to {
+    font-size: 3em;
+    opacity: 1;
+    transform: rotate(360deg);
+    width: 90px;
+  }
+}

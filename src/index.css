@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@theme {
+  --font-default: "Inter", sans-serif;
+  --font-norican: "Norican", cursive;
+}
+/**
+  NOTHING HERE.
+*/
