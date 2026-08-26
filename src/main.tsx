@@ -1,11 +1,11 @@
-import './index.css'
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import "./index.css";
+import { createRoot } from "react-dom/client";
+import SlimOS from "@/SlimOS.tsx";
+import { Provider } from "react-redux";
+import { store } from "@/store";
 
-import SlimOS from './SlimOS.tsx'
-
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+createRoot(document.getElementById("root")!).render(
+  <Provider store={store}>
     <SlimOS />
-  </StrictMode>,
-)
+  </Provider>,
+);
