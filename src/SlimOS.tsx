@@ -1,9 +1,6 @@
-import Booting from "./screens/Booting";
+import { useScreen } from "@/hooks/useScreen";
 
 export default function SlimOS() {
-  return (
-    <>
-      <Booting />
-    </>
-  );
+  const { renderScreen } = useScreen();
+  return renderScreen();
 }
