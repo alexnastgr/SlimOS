@@ -1,18 +1,18 @@
-import { Icon } from "@iconify/react";
-import { useBootSequence } from "@/hooks/useBootSequence";
 import "@/styles/booting.css";
 
-import { useSound } from "@/hooks/useSound";
+
+import { Icon } from "@iconify/react";
+import { useBootSequence } from "@/hooks/useBootSequence";
+
+import { useScreen } from "@/hooks/useScreen";
+
 
 import logo from "@/assets/logo.svg";
 export default function Booting() {
   const { step, isReady } = useBootSequence();
 
-  const { play } = useSound();
 
-  const gotoDesktop = () => {
-    play("welcome");
-  };
+  const {gotoScreen} = useScreen();
 
   if (!isReady) {
     // first time system boots
@@ -45,9 +45,7 @@ export default function Booting() {
         </div>
 
         {/* navigate to main desktop area */}
-        <button onClick={gotoDesktop} className="btnDesktop">
-          Go to Desktop Screen
-        </button>
+        <div className="btnDesktop" onClick={()=>{gotoScreen("login")}}>Goto Login</div>
       </div>
     </div>
   );
