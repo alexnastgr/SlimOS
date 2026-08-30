@@ -1,5 +1,5 @@
 import welcome from "@/assets/sounds/welcome.mp3";
-import error from "@/assets/sounds/welcome.mp3";
+import error from "@/assets/sounds/error.mp3";
 
 export type Sound = {
   name: string;
