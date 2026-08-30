@@ -1,8 +1,8 @@
+import { type ScreenName } from "@/store/slices/screenSlice";
 import { useAppDispatch, useAppSelector } from "@/store/_hooks";
 import { setScreen } from "@/store/slices/screenSlice";
 import { screens } from "@/screens";
 
-import type { ScreenName } from "@/types/screens";
 
 export function useScreen() {
   const currentScreen = useAppSelector((state) => state.screen.current);

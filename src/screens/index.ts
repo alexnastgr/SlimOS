@@ -3,7 +3,8 @@ import type { ScreenName } from "@/store/slices/screenSlice";
 
 // available screens
 import Booting from "@/screens/Booting";
-import Login from "@/screens/Login";
+import Auth from "@/screens/Auth";
+import Desktop from "@/screens/Desktop";
 
 export interface Screen {
   name: ScreenName;
@@ -16,8 +17,13 @@ export const screens: Record<ScreenName, Screen> = {
     component: Booting,
   },
 
-  login: {
-    name: "login",
-    component: Login,
+  auth: {
+    name: "auth",
+    component: Auth,
+  },
+
+  desktop: {
+    name: "desktop",
+    component: Desktop,
   },
 };

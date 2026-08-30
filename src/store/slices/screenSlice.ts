@@ -1,6 +1,6 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
-export type ScreenName = "booting" | "login";
+export type ScreenName = "booting" | "auth" | "desktop";
 
 interface ScreenState {
   current: ScreenName;
