@@ -6,8 +6,6 @@ import { useBootSequence } from "@/hooks/useBootSequence";
 
 import { useScreen } from "@/hooks/useScreen";
 
-
-import logo from "@/assets/logo.svg";
 export default function Booting() {
   const { step, isReady } = useBootSequence();
 
@@ -21,7 +19,7 @@ export default function Booting() {
         {/* boot animation */}
         <div className="content text-white">
           <div className="logo-boot">
-            <Icon icon="lucide:box" width={32} />
+            <Icon icon="mdi:apple" width={60} />
           </div>
           {/* current step string */}
           <p className="text-sm">{step}...</p>
@@ -35,7 +33,7 @@ export default function Booting() {
     <div className="readyScreen bg-url[(images/ready.jpg)]">
       <div className="content text-white">
         <div>
-          <img src={logo} alt={"Logo"} width={100} className="spin" />
+          <Icon icon="mdi:apple" width={80} className="spin" />
         </div>
 
         {/* welcome message */}
@@ -45,7 +43,7 @@ export default function Booting() {
         </div>
 
         {/* navigate to main desktop area */}
-        <div className="btnDesktop" onClick={()=>{gotoScreen("login")}}>Goto Login</div>
+        <div className="btnDesktop" onClick={()=>{gotoScreen("desktop")}}>Load My Desktop</div>
       </div>
     </div>
   );

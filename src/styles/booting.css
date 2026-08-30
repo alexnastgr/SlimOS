@@ -33,7 +33,7 @@
 }
 
 .logo-boot {
-  @apply w-13 h-13 bg-white rounded-full animate-pulse text-black;
+  @apply animate-pulse text-white;
   @apply flex justify-center items-center;
 }
 
