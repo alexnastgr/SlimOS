@@ -1,5 +1,4 @@
-import { Sounds } from "@/types/sounds";
-
+import { Sounds } from "@/data/sounds";
 
 export const useSound = () => {
   const play = (name: string) => {
