@@ -1,0 +1,69 @@
+@reference "@/index.css";
+
+/**
+ Auth Screen Styling */
+.AuthScreen {
+  @apply w-screen h-screen relative overflow-hidden;
+  @apply flex flex-col justify-center items-center;
+  @apply gap-12 bg-black;
+}
+
+.AuthScreen::before {
+  content: "";
+  @apply absolute -inset-5;
+  @apply bg-cover bg-center bg-no-repeat;
+  @apply bg-[url('/images/auth.jpg')];
+  filter: blur(22px) brightness(0.3);
+}
+
+.AuthScreen > * {
+  @apply relative z-10;
+}
+
+.users {
+  @apply flex flex-row gap-5;
+}
+
+.user {
+  @apply flex flex-col justify-center items-center;
+  @apply text-white gap-5;
+}
+.user .avatar {
+  @apply transition-all;
+  @apply group-hover:border-primary;
+  @apply group-active:border-primary;
+  @apply w-22 h-22 rounded-full bg-cover bg-no-repeat;
+  @apply border-2 border-white/60 cursor-pointer;
+  @apply hover:border-primary;
+}
+
+.userName {
+  @apply transition-colors;
+  @apply group-hover:text-primary;
+  @apply group-active:text-primary;
+}
+
+.action {
+  @apply transition-all;
+  @apply text-xs;
+  @apply h-full opacity-60 cursor-pointer hover:opacity-90;
+  @apply flex flex-col gap-2 text-white;
+  @apply justify-center items-center;
+}
+
+.action .icon {
+  @apply w-10 h-10 bg-white/20 rounded-full;
+  @apply flex justify-center items-center;
+}
+
+.passFields {
+  @apply mt-5 flex flex-row justify-center;
+  @apply items-center h-8 gap-2;
+}
+
+.passField {
+  @apply h-8 bg-white/40 rounded-md;
+  @apply text-white text-center;
+  @apply font-semibold text-lg;
+  @apply border-none outline-none focus:ring-0;
+}

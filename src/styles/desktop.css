@@ -1,0 +1,7 @@
+@reference "@/index.css";
+
+.desktop {
+  @apply w-screen h-screen;
+  @apply bg-cover bg-center bg-no-repeat;
+}
+

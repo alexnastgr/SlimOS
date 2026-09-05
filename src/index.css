@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+* {
+  user-select: none;
+
+}
+
+@theme {
+  --font-default: "Inter", sans-serif;
+  --font-norican: "Norican", cursive;
+
+  --color-primary: #b5f200;
+}
+/**
+  NOTHING HERE.
+*/
+
+.errorMsg {
+  @apply w-full
+        h-8
+        flex
+        items-center
+        px-3
+        rounded-md
+        text-white;
+}

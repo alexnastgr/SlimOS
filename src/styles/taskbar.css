@@ -1,0 +1,27 @@
+@reference "@/index.css";
+
+.taskBar {
+  @apply w-full h-8 absolute flex flex-row justify-center items-center z-100;
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.btnStart {
+  @apply w-20 h-7 flex justify-center items-center;
+}
+
+.appName {
+  @apply text-sm font-semibold;
+}
+.dateTime {
+  @apply flex h-full flex-row gap-2 justify-center items-center;
+}
+
+.leftPanel {
+  @apply w-30 h-full absolute left-0 flex flex-row;
+  @apply justify-center items-center gap-1;
+}
+
+.rightPanel {
+  @apply w-auto h-full absolute right-3;
+  @apply flex flex-row gap-3 justify-center items-center;
+}
