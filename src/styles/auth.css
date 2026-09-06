@@ -32,7 +32,7 @@
   @apply transition-all;
   @apply group-hover:border-primary;
   @apply group-active:border-primary;
-  @apply w-22 h-22 rounded-full bg-cover bg-no-repeat;
+  @apply w-45 h-45 rounded-full bg-cover bg-no-repeat;
   @apply border-2 border-white/60 cursor-pointer;
   @apply hover:border-primary;
 }
@@ -43,7 +43,7 @@
   @apply group-active:text-primary;
 }
 
-.action {
+.actions {
   @apply transition-all;
   @apply text-xs;
   @apply h-full opacity-60 cursor-pointer hover:opacity-90;
@@ -51,7 +51,7 @@
   @apply justify-center items-center;
 }
 
-.action .icon {
+.actions .icon {
   @apply w-10 h-10 bg-white/20 rounded-full;
   @apply flex justify-center items-center;
 }
