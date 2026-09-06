@@ -2,14 +2,13 @@
 
 * {
   user-select: none;
-
 }
 
 @theme {
   --font-default: "Inter", sans-serif;
   --font-norican: "Norican", cursive;
 
-  --color-primary: #b5f200;
+  --color-primary: #ff7d00;
 }
 /**
   NOTHING HERE.

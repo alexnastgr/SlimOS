@@ -48,6 +48,7 @@ export default function Auth() {
 
     if (!result.success) {
       showMessage("Invalid password", "error");
+      play("error");
 
       return;
     }
