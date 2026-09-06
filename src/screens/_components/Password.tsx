@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react";
 import type { ChangeEvent } from "react";
 
 interface Props {
@@ -22,8 +23,14 @@ function Password({ value, onChange, onLogin }: Props) {
           }
         }}
         type="password"
+        inputMode="numeric"
         className="passField"
       />
+
+      {/* login button */}
+      <div className="btnLogin" onClick={onLogin} title="Login">
+        <Icon icon="solar:lock-unlocked-bold-duotone" width={22} />
+      </div>
     </div>
   );
 }

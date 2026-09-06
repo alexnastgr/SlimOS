@@ -67,3 +67,8 @@
   @apply font-semibold text-lg;
   @apply border-none outline-none focus:ring-0;
 }
+
+.btnLogin {
+  @apply w-8 h-full rounded-lg flex justify-center items-center;
+  @apply bg-white/70 hover:bg-primary cursor-pointer;
+}
