@@ -60,20 +60,18 @@ export default function Auth() {
   return (
     <div className="AuthScreen relative">
       {!user ? (
-        <AnimatePresence>
-          <div className="users">
-            {usersList.map((user) => (
-              <User key={user.username} user={user} select={selectUser} />
-            ))}
-          </div>
-        </AnimatePresence>
+        <div className="users">
+          {usersList.map((user) => (
+            <User key={user.username} user={user} select={selectUser} />
+          ))}
+        </div>
       ) : (
-        <AnimatePresence>
-          <div>
-            <User user={user} />
+        <div>
+          <User user={user} />
 
-            <Password value={pass} onChange={setPass} onLogin={handleLogin} />
-
+          <Password value={pass} onChange={setPass} onLogin={handleLogin} />
+          {/* error message */}
+          <div className="w-full h-5 mt-5">
             <AnimatePresence>
               {message && (
                 <ErrorMessage
@@ -84,7 +82,7 @@ export default function Auth() {
               )}
             </AnimatePresence>
           </div>
-        </AnimatePresence>
+        </div>
       )}
 
       <Actions
