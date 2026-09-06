@@ -1,7 +1,7 @@
 export type UserType = "admin" | "user";
 
 export type IUser = {
-  uid:number;
+  uid: number;
   name: string;
   username: string;
   password: string;
@@ -9,3 +9,4 @@ export type IUser = {
   userType: UserType;
 };
 
+export type Action = "logout" | "lock" | "reboot" | null;
