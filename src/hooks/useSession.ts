@@ -1,15 +1,17 @@
 import { useCallback } from "react";
+
 import { usersList } from "@/data/users";
-import { login, logout } from "@/store/slices/sessionSlice";
-import { initializeUserSettings } from "@/store/slices/settingSlice";
 import { useAppDispatch, useAppSelector } from "@/store/_hooks";
+
+import { login, logout, lock, unlock } from "@/store/slices/sessionSlice";
+
+import { initializeUserSettings } from "@/store/slices/settingSlice";
 
 export const useSession = () => {
   const dispatch = useAppDispatch();
 
-  const { currentUser, isAuthenticated } = useAppSelector(
-    (state) => state.session,
-  );
+  const { currentUser, lastUser, isAuthenticated, isLocked, action } =
+    useAppSelector((state) => state.session);
 
   const loginUser = useCallback(
     (username: string, password: string) => {
@@ -32,7 +34,6 @@ export const useSession = () => {
         user,
       };
     },
-
     [dispatch],
   );
 
@@ -40,11 +41,39 @@ export const useSession = () => {
     dispatch(logout());
   }, [dispatch]);
 
-  return {
-    currentUser,
-    isAuthenticated,
+  const lockUser = useCallback(() => {
+    if (!currentUser) return false;
 
+    dispatch(lock());
+
+    return true;
+  }, [dispatch, currentUser]);
+
+  const unlockUser = useCallback(
+    (password: string) => {
+      if (!currentUser || currentUser.password !== password) {
+        return false;
+      }
+
+      dispatch(unlock());
+
+      return true;
+    },
+    [dispatch, currentUser],
+  );
+
+  return {
+    // state
+    currentUser,
+    lastUser,
+    isAuthenticated,
+    isLocked,
+    action,
+
+    // actions
     login: loginUser,
     logout: logoutUser,
+    lock: lockUser,
+    unlock: unlockUser,
   };
 };
