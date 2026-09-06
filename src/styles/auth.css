@@ -32,7 +32,7 @@
   @apply transition-all;
   @apply group-hover:border-primary;
   @apply group-active:border-primary;
-  @apply w-45 h-45 rounded-full bg-cover bg-no-repeat;
+  @apply w-32 h-32 rounded-full bg-cover bg-no-repeat;
   @apply border-2 border-white/60 cursor-pointer;
   @apply hover:border-primary;
 }
