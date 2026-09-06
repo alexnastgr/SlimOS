@@ -5,7 +5,7 @@ export const usersList: IUser[] = [
     uid: 1034,
     name: "John Doe",
     username: "johndoe",
-    password: "40600100",
+    password: "12345",
     avatar: "1.png",
     userType: "admin",
   },
