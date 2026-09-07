@@ -16,7 +16,7 @@ export default function Actions({
     <div className="flex flex-row gap-6 absolute bottom-0">
       {/* reboot action */}
       {showReboot && (
-        <div className="action" onClick={onReboot}>
+        <div className="actions" onClick={onReboot}>
           <div className="icon">
             <Icon icon="iconamoon:restart" width={25} />
           </div>
@@ -26,7 +26,7 @@ export default function Actions({
 
       {/*  switch user  */}
       {showSwitch && (
-        <div className="action" onClick={onSwitch}>
+        <div className="actions" onClick={onSwitch}>
           <div className="icon">
             <Icon icon="fluent-mdl2:switch-user" width={25} />
           </div>
