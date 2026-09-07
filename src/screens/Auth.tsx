@@ -49,12 +49,11 @@ export default function Auth() {
     if (!result.success) {
       showMessage("Invalid password", "error");
       play("error");
-
       return;
     }
 
     play("welcome");
-    gotoScreen("desktop");
+    gotoScreen("greeting");
   };
 
   return (
