@@ -1,7 +1,7 @@
 @reference "@/index.css";
 
 .taskBar {
-  @apply w-full h-10 absolute flex flex-row justify-center items-center z-100;
+  @apply w-full h-7 absolute flex flex-row justify-center items-center z-100;
   @apply transition-all duration-200 ease-in-out;
 }
 
@@ -23,5 +23,10 @@
 }
 
 .action {
-  @apply w-7 h-7 rounded-md flex justify-center items-center;
+  @apply w-5 h-5 flex justify-center items-center;
+}
+
+.overlay {
+  @apply flex justify-center absolute items-center w-screen h-screen;
+  @apply bg-black/90 fixed top-0 left-0 text-white;
 }

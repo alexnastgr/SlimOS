@@ -1,0 +1,17 @@
+@reference "@/index.css";
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+.greetingScreen {
+  @apply flex bg-black text-white h-screen items-center justify-center;
+}
+
+.actionLabel {
+  @apply text-2xl font-semibold;
+}
+
+.username {
+  @apply text-primary text-3xl font-extrabold;
+}

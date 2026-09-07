@@ -1,5 +1,8 @@
 @reference "@/index.css";
 
+body{
+  background-color: rgb(0, 0, 0);
+}
 /**
  Auth Screen Styling */
 .AuthScreen {
@@ -32,7 +35,7 @@
   @apply transition-all;
   @apply group-hover:border-primary;
   @apply group-active:border-primary;
-  @apply w-32 h-32 rounded-full bg-cover bg-no-repeat;
+  @apply w-28 h-28 rounded-full bg-cover bg-no-repeat;
   @apply border-2 border-white/60 cursor-pointer;
   @apply hover:border-primary;
 }
