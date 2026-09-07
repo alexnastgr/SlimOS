@@ -12,7 +12,6 @@ function Taskbar() {
 
   const style: CSSProperties = {
     backgroundColor: darkMode ? "rgb(18, 18, 18)" : "rgb(255, 255, 255)",
-    opacity: darkMode ? 0.9 : 0.7,
     color: darkMode ? "#fff" : "#000",
   };
   
